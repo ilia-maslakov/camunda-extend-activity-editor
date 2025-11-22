@@ -1,0 +1,7 @@
+# libraries that get pulled during build
+/node_modules
+
+# IDE artifacts
+.vscode/
+.idea/
+.token

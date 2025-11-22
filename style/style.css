@@ -1,0 +1,320 @@
+.djs-activity-list {
+  position: absolute !important;
+  right: 20px;
+  bottom: 30px;
+  width: 300px;
+  background: #ffffff;
+  border: 1px solid #888;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+  font-size: 13px;
+  z-index: 9999 !important;
+  overflow: hidden;
+}
+
+/* свернуто — остаётся только кнопка */
+.djs-activity-list:not(.open) .djs-activity-list-container,
+.djs-activity-list:not(.open) .filters {
+  display: none !important;
+}
+
+.djs-activity-list-toggle {
+  background: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 6px;
+  cursor: pointer;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.djs-activity-list-toggle:hover {
+  background: #34495e;
+}
+
+.djs-activity-list-container {
+  padding: 6px 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* === Filters line === */
+.djs-activity-list .filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  user-select: none;
+}
+
+.djs-activity-list .filters label {
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+}
+
+.djs-activity-list .filters input {
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+/* === Activity type select === */
+.djs-activity-list .activity-type-select {
+  width: 100%;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  padding: 2px 6px;
+  height: 28px; /* идеально вровень с кнопками */
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.djs-activity-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.djs-activity-list li {
+  padding: 4px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.djs-activity-list li:last-child {
+  border-bottom: none;
+}
+
+.djs-activity-list-resize {
+  position: absolute;
+  right: 4px;
+  bottom: 6px;
+  width: 10px;
+  height: 10px;
+  cursor: se-resize;
+  background: none;
+}
+
+.djs-activity-list-resize::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 8px solid #ccc;
+  border-top: 8px solid transparent;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.djs-activity-list-resize:hover::after {
+  opacity: 1;
+  border-right-color: #555;
+}
+
+.djs-element.highlight > rect,
+.djs-element.highlight > path {
+  stroke: #ff6600 !important;
+  stroke-width: 3px !important;
+}
+
+/* === AI Rename Wizard === */
+.ai-rename-wizard {
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 200px);
+  width: 400px;
+  background: #ffffff;
+  border: 1px solid #888;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+  font-size: 13px;
+  z-index: 10000;
+  padding: 14px;
+}
+
+.ai-rename-wizard h3 {
+  margin-top: 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2c3e50;
+}
+
+.ai-rename-wizard select,
+.ai-rename-wizard input[type="text"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+  padding: 4px 6px;
+  margin-bottom: 8px;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.ai-rename-wizard select {
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+.ai-rename-wizard button {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ai-rename-wizard button#apply {
+  background: #0074D9;
+  color: #fff;
+}
+
+.ai-rename-wizard button#apply:hover {
+  background: #005fa3;
+}
+
+.ai-rename-wizard button#cancel {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.ai-rename-wizard button#cancel:hover {
+  background: #cacaca;
+}
+
+.ai-rename-wizard .examples {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ai-rename-wizard .examples b {
+  color: #2c3e50;
+}
+
+/* === Таблица активностей === */
+.djs-activity-list table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.djs-activity-list th,
+.djs-activity-list td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 3px 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.djs-activity-list th {
+  background: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  user-select: none;
+}
+
+.djs-activity-list tr:hover {
+  background: #f8f8f8;
+}
+
+.djs-activity-list .activity-id {
+  color: #0074D9;
+  font-weight: bold;
+  cursor: text;
+}
+
+/* === Поле ввода при редактировании ID === */
+.djs-activity-list input.activity-edit {
+  font-family: monospace;
+  font-size: 12px;
+  padding: 4px 4px;
+  border: 1px solid #66afe9;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 1px rgba(102, 175, 233, 0.6);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+}
+
+.djs-activity-list input.activity-edit:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 2px rgba(26, 115, 232, 0.7);
+}
+
+/* Подсветка строки при редактировании */
+.djs-activity-list tr.editing {
+  background: #eef6ff !important;
+}
+
+/* === Toolbar buttons (AI Rename / Copy / Prompt Settings) === */
+.djs-activity-list .generate-btn,
+.djs-activity-list .copy-btn,
+.djs-activity-list .prompt-settings-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+/* AI Rename */
+.djs-activity-list .generate-btn {
+  background: #0074D9;
+  color: #fff;
+  margin-left: 6px;
+}
+
+.djs-activity-list .generate-btn:hover {
+  background: #005fa3;
+}
+
+/* Copy button */
+.djs-activity-list .copy-btn {
+  background: #6c757d;
+  color: #fff;
+  margin-left: 4px;
+}
+
+.djs-activity-list .copy-btn:hover {
+  background: #5a6268;
+}
+
+/* Prompt Settings */
+.djs-activity-list .prompt-settings-btn {
+  background: #e0e0e0;
+  color: #333;
+  margin-left: 4px;
+}
+
+.djs-activity-list .prompt-settings-btn:hover {
+  background: #cacaca;
+}
