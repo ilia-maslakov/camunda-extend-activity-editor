@@ -165,11 +165,20 @@ client/client-bundle.js
 
 ```
 camunda-extend-activity-editor/
+ ├─ index.js
  ├─ client/
  │   ├─ client.js
- │   ├─ client-bundle.js
- ├─ index.js
+ │   ├─ client-bundle.js      <- (browserify-generated bundle)
+ │   ├─ ActivityListPlugin.js
+ │   ├─ ActivityListUI.js
+ │   ├─ ActivityListUpdater.js
+ │   ├─ FocusAndSelectElement.js
+ │   ├─ OpenAiClient.js
+ │   ├─ PromptSettingsDialog.js
+ │   ├─ SmartRenameWizard.js
+ │   └─ PluginLog.js
  ├─ menu/
+ │   └─ menu.js
  ├─ style/
  │   └─ style.css
  ├─ package.json
