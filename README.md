@@ -18,6 +18,12 @@ This plugin is designed to make working with complex BPMN diagrams significantly
 
 ---
 
+## Screenshots
+
+![Activity Editor Screenshot](screenshot.png)
+
+---
+
 ## Features
 
 ### 🔍 Activity List Panel
