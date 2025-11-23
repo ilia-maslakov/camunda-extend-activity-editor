@@ -20,7 +20,18 @@ This plugin is designed to make working with complex BPMN diagrams significantly
 
 ## Screenshots
 
+
+### Activity Editor Panel
 ![Activity Editor Screenshot](screenshot.png)
+
+### Smart Rename with AI
+![Smart Rename Screenshot](screenshot2.png)
+
+### AI Settings
+![AI Settings Screenshot](screenshot3.png)
+
+### Click the Activity Icon to Focus the Element on the Diagram
+![Focus Element Screenshot](screenshot4.png)
 
 ---
 
